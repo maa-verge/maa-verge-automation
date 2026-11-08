@@ -1,0 +1,18 @@
+{
+  "interface_version": 2,
+  "name": "maa-verge-automation",
+  "label": "Maa Verge Automation",
+  "version": "0.0.0",
+  "github": "https://github.com/maa-verge/maa-verge-automation",
+  "license": "AGPL-3.0-only",
+  "controller": [],
+  "resource": [
+    {
+      "name": "default",
+      "path": [
+        "./resource"
+      ]
+    }
+  ],
+  "task": []
+}

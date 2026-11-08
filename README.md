@@ -4,6 +4,37 @@
 
 当前处于规划与仓库初始化阶段，尚未交付独立可用包或完成双端集成。现有实现参考 Maa Verge 的迁移分支，实际拆分与接入按计划逐步推进。
 
+## 项目结构
+
+```text
+interface.json   Project Interface V2 声明
+src/
+  index.ts       TypeScript 包入口
+  primitives/    原语
+  compositions/  组合
+  flows/         流程
+resource/
+  pipeline/      MaaFW Pipeline JSON/JSONC
+  image/         MaaFW 模板图片
+```
+
+`interface.json` 声明项目元数据并指向 `./resource`；当前 `controller` 和 `task` 为空，后续接入控制器与任务时再补充。
+
+当前提供目录占位、TypeScript 构建配置和 Interface/Pipeline 编辑器配置，尚未实现自动化逻辑。
+
+```sh
+npm install
+npm run check
+npm run build
+```
+
+开发配置参考 [MaaPracticeBoilerplate](https://github.com/MaaXYZ/MaaPracticeBoilerplate/tree/f71376ec5f08853702e94d514a6da79bc6adec1e)：
+
+- `.vscode/` 为根目录 `interface.json` 和 `resource/pipeline/` 下的 JSON/JSONC 分别关联官方 Interface/Pipeline Schema，并推荐 Maa Support 和 EditorConfig 扩展。
+- Schema 固定到 [MaaFramework v5.15.0](https://github.com/MaaXYZ/MaaFramework/blob/172ec7b97df3e5b10adf69e36df01f8dc495b6f6/tools/pipeline.schema.json)，由编辑器联网加载；运行时版本由宿主确定。
+- `.editorconfig` 和 `.gitattributes` 统一 UTF-8、LF 与缩进：TypeScript/项目配置为两空格，Pipeline 为四空格。
+- `debug/`、`config/`、`install/` 和日志作为本地产物忽略。
+
 ## 设计方向
 
 - 以原语、组合、Pipeline/业务流程组织资产，通用能力与明日方舟领域模块分别导出。

@@ -1,0 +1,26 @@
+{
+  "json.schemas": [
+    {
+      "fileMatch": [
+        "/resource/pipeline/**/*.json",
+        "/resource/pipeline/**/*.jsonc"
+      ],
+      "url": "https://raw.githubusercontent.com/MaaXYZ/MaaFramework/172ec7b97df3e5b10adf69e36df01f8dc495b6f6/tools/pipeline.schema.json"
+    },
+    {
+      "fileMatch": ["/interface.json"],
+      "url": "https://raw.githubusercontent.com/MaaXYZ/MaaFramework/172ec7b97df3e5b10adf69e36df01f8dc495b6f6/tools/interface.schema.json"
+    }
+  ],
+  "files.associations": {
+    "**/resource/pipeline/**/*.json": "jsonc"
+  },
+  "files.eol": "\n",
+  "editor.insertSpaces": true,
+  "editor.tabSize": 2,
+  "[jsonc]": {
+    "editor.defaultFormatter": "vscode.json-language-features",
+    "editor.formatOnSave": true,
+    "editor.tabSize": 4
+  }
+}
