@@ -16,7 +16,7 @@
 
 - [整体重构计划 #1](https://github.com/maa-verge/maa-verge-automation/issues/1)：仓库边界、三层映射、原生化、双端消费与分阶段验收。
 - [原生化试点 #2](https://github.com/maa-verge/maa-verge-automation/issues/2)：冻结基线，以唤醒与公招验证 MaaFW 原生流程及 TS Custom。
-- [Debugger 计划](https://github.com/maa-verge/maa-verge-debugger/issues/1)：独立通用编辑与调试工具，共享模块作为可选项目适配接入。
+- [Debugger 计划](https://github.com/maa-verge/maa-verge-debugger/issues/1)：面向 Maa Verge 的独立桌面调试工具，两端共同依赖本共享模块；首版由 Debugger 启动隔离调试宿主，本体不新增界面入口。
 
 建议与问题请提交到 [Issues](https://github.com/maa-verge/maa-verge-automation/issues)。
 
